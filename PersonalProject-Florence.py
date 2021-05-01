@@ -12,6 +12,7 @@ import plotly.express as px
 import pandas as pd
 import plotly
 import dash_table
+import sys
 
 
 # In[127]:
@@ -31,7 +32,7 @@ MET = MET[MET['AccessionYear'].isin(options)]
 
 dff = MET.groupby('AccessionYear', as_index=False)[['Object ID','Country','Culture']].nunique()
 #dff.columns=['AccessionYear','Total Objects Amount', 'Countries Count', 'Culture Types Count']
-print (dff[:9])
+print (dff[:9], file = sys.stdout)
 
 app.layout = html.Div([
     html.Div([
