@@ -1,1 +1,1 @@
-web: gunicorn PersonalProject-Florence Gu:server
+web: gunicorn PersonalProject-Florence_Gu:server
