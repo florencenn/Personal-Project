@@ -14,7 +14,6 @@ import plotly
 import dash_table
 import sys
 
-
 # In[127]:
 
 
@@ -26,7 +25,7 @@ app = dash.Dash(__name__, external_stylesheets=stylesheet)
 #new.dropna(subset = ['Culture','Country','Classification','Title'], inplace=True)
 #new.to_csv('newMET.csv')
 
-MET= pd.read_csv("https://raw.githubusercontent.com/florencenn/Personal-Project/main/newMET.csv", index_col=False, lineterminator='\r')
+MET= pd.read_csv("https://raw.githubusercontent.com/florencenn/Personal-Project/main/newMET.csv", index_col=False)
 options = ['1939.0', '1940.0','1941.0','1942.0','1943.0','1944.0','1945.0','1946.0','1947.0']
 MET = MET[MET['AccessionYear'].isin(options)]
 
